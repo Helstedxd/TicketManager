@@ -12,8 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using HttpPoster;
-using HashString;
+using Tickets4You;
 
 namespace TicketManager
 {
@@ -33,6 +32,7 @@ namespace TicketManager
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
             RemotePost req = new RemotePost("http://tickets4you.dk/api/login.php");
             req.Timeout = 3;
 

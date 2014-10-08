@@ -32,3 +32,5 @@ C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\HttpPo
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\HttpPoster.pdb
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\HashString.dll
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\HashString.pdb
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\Tickets4You.dll
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\Tickets4You.pdb

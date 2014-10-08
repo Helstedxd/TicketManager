@@ -32,16 +32,10 @@ namespace TicketManager
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Tickets4YouManager t4y = new Tickets4YouManager("test");
 
-            RemotePost req = new RemotePost("http://tickets4you.dk/api/login.php");
-            req.Timeout = 3;
-
-            req.Add("Username", Username.Text);
-            req.Add("Password", HashBuilder.GetHashString(Password.Password));
-
-            string response = req.Post();
-
-            MessageBox.Show(response);
+            string test = t4y.userLogin(Username.Text, Password.Password);
+            MessageBox.Show(test);
             /*
             if (Convert.ToBoolean(response))
             {

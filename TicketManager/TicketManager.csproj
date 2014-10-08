@@ -37,7 +37,6 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -106,6 +105,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HashString\HashString.csproj">
+      <Project>{5711ada4-8503-4741-b410-fa23f0643a6d}</Project>
+      <Name>HashString</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HttpPoster\HttpPoster.csproj">
+      <Project>{47624608-8c92-41a4-8bb4-882796e242ee}</Project>
+      <Name>HttpPoster</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

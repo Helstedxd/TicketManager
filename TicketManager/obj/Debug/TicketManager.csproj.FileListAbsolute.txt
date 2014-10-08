@@ -13,3 +13,22 @@ c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\Ticke
 c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.csproj.GenerateResource.Cache
 c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.exe
 c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.pdb
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\TicketManager.exe.config
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\TicketManager.exe
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\TicketManager.pdb
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\TicketManager.exe
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\TicketManager.pdb
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\TicketManager.csprojResolveAssemblyReference.cache
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\MainWindow.baml
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\userLogin.baml
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\MainWindow.g.cs
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\userLogin.g.cs
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\App.g.cs
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\TicketManager_MarkupCompile.cache
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\TicketManager.g.resources
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\TicketManager.Properties.Resources.resources
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\TicketManager.csproj.GenerateResource.Cache
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\HttpPoster.dll
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\HttpPoster.pdb
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\HashString.dll
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\HashString.pdb

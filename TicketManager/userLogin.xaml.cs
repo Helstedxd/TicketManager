@@ -12,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using HttpPoster;
+using HashString;
 
 namespace TicketManager
 {
@@ -31,18 +33,27 @@ namespace TicketManager
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            RemotePost req = new RemotePost("http://helsted.eu");
+            RemotePost req = new RemotePost("http://tickets4you.dk/api/login.php");
             req.Timeout = 3;
 
-            req.Add("FirstName", "First");
-            req.Add("LastName", "Last");
+            req.Add("Username", Username.Text);
+            req.Add("Password", HashBuilder.GetHashString(Password.Password));
 
             string response = req.Post();
 
             MessageBox.Show(response);
+            /*
+            if (Convert.ToBoolean(response))
+            {
+                DialogResult = true;
+            }
+            else
+            {
+                MessageBox.Show("Err0r");
+            }
+            */
 
-            DialogResult = true;
-            this.Close();
+            //this.Close();
         }
     }
 }

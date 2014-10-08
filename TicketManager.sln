@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpPoster", "HttpPoster\Ht
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashString", "HashString\HashString.csproj", "{5711ADA4-8503-4741-B410-FA23F0643A6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tickets4You", "Tickets4You\Tickets4You.csproj", "{F967A114-A7FD-4CFA-B87F-AD7862652F33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{5711ADA4-8503-4741-B410-FA23F0643A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5711ADA4-8503-4741-B410-FA23F0643A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5711ADA4-8503-4741-B410-FA23F0643A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F967A114-A7FD-4CFA-B87F-AD7862652F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F967A114-A7FD-4CFA-B87F-AD7862652F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F967A114-A7FD-4CFA-B87F-AD7862652F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F967A114-A7FD-4CFA-B87F-AD7862652F33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

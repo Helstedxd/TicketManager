@@ -41,6 +41,13 @@ namespace Tickets4You
             }
         }
 
+        public List<object> getEvents()
+        {
+            List<object> le = new List<object>();
+
+            return le;
+        }
+
         public string getUserSession()
         {
             if (string.IsNullOrEmpty(userSession))

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tickets4You;
 
 namespace TicketManager
 {
@@ -34,19 +35,22 @@ namespace TicketManager
                 if (userLoginWindow.ShowDialog() == true)
                 {
                     userSession = userLoginWindow.userSessionKey;
+                    
+                    Tickets4YouManager t4y = new Tickets4YouManager("test");
+
+  
                 }
                 else
                 {
                     Close();
                 }
             }
-
+            /*
             Ticket x = new Ticket("9781447920113", "Kasper Helsted");
             StaticTicketItems.Tickets.Add(x);
             Ticket z = new Ticket("9788777511530", "Kasper Hartvig Laursen");
             StaticTicketItems.Tickets.Add(z);
-
-            selectEvent.Items.Add("test");
+            */
         }
 
         private void OnKeyDownHandler(object sender, KeyEventArgs e)

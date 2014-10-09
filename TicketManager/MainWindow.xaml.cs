@@ -38,6 +38,7 @@ namespace TicketManager
                     userSession = userLoginWindow.userSessionKey;
                     
                     Tickets4YouManager t4y = new Tickets4YouManager("test");
+                    StaticTicketItems.ListEvents.Add(new ListEvents(null, "Choose Event"));                    
                     StaticTicketItems.ListEvents.AddRange(t4y.getEvents(userSession));
                     selectEvent.Items.Refresh();
   
@@ -47,12 +48,6 @@ namespace TicketManager
                     Close();
                 }
             }
-            /*
-            Ticket x = new Ticket("9781447920113", "Kasper Helsted");
-            StaticTicketItems.Tickets.Add(x);
-            Ticket z = new Ticket("9788777511530", "Kasper Hartvig Laursen");
-            StaticTicketItems.Tickets.Add(z);
-            */
         }
 
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
@@ -93,6 +88,14 @@ namespace TicketManager
                 Ticket t = new Ticket(test, CreateTicketName.Text);
                 StaticTicketItems.Tickets.Add(t);
                 listView.Items.Refresh();
+            }
+        }
+
+        private void selectEvent_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(StaticTicketItems.ListEvents[selectEvent.SelectedIndex].getEventId))
+            {
+                MessageBox.Show(StaticTicketItems.ListEvents[selectEvent.SelectedIndex].getEventId);
             }
         }
     }

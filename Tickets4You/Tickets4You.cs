@@ -44,7 +44,6 @@ namespace Tickets4You
         public List<ListEvents> getEvents(string userSessionKey)
         {
             List<ListEvents> le = new List<ListEvents>();
-            int i = 0;
 
             RemotePost req = new RemotePost("http://tickets4you.dk/api/getEvents.php");
             req.Timeout = 3;
@@ -53,10 +52,9 @@ namespace Tickets4You
 
             dynamic data = ParseJSON(req.Post());
 
-            while (!string.IsNullOrEmpty(data[i].eventName))
+            for (int i = 0; i < data.Length; i++)
             {
                 le.Add(new ListEvents(Convert.ToString(data[i].eventId), Convert.ToString(data[i].eventName)));
-                i++;
             }
 
             return le;

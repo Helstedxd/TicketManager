@@ -28,6 +28,7 @@ namespace TicketManager
         {
             InitializeComponent();
             listView.ItemsSource = StaticTicketItems.Tickets;
+            selectEvent.ItemsSource = StaticTicketItems.ListEvents;
 
             if (userSession.Length == 0)
             {
@@ -37,8 +38,8 @@ namespace TicketManager
                     userSession = userLoginWindow.userSessionKey;
                     
                     Tickets4YouManager t4y = new Tickets4YouManager("test");
-                    List<ListEvents> test = t4y.getEvents(userSession);
-                    //selectEvent.ItemsSource = test;
+                    StaticTicketItems.ListEvents.AddRange(t4y.getEvents(userSession));
+                    selectEvent.Items.Refresh();
   
                 }
                 else

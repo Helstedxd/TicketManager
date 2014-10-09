@@ -34,3 +34,9 @@ C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\HashSt
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\HashString.pdb
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\Tickets4You.dll
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\Tickets4You.pdb
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\Tickets4You.dll
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\HttpPoster.dll
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\HashString.dll
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\Tickets4You.pdb
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\HttpPoster.pdb
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\HashString.pdb

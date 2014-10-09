@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tickets4You
 {
-    class ListEvents
+    public class ListEvents
     {
         private string eventId = null, eventName = null;
 
@@ -30,6 +30,11 @@ namespace Tickets4You
             {
                 return eventId;
             }
+        }
+
+        public override string ToString()
+        {
+            return eventName;
         }
     }
 }

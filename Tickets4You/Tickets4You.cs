@@ -13,7 +13,7 @@ namespace Tickets4You
 {
     public class Tickets4YouManager
     {
-        private string APIKey = null, userSession = null, userLoginError = null;
+        private string APIKey = null, userSession = null;
 
         public Tickets4YouManager(string key)
         {
@@ -41,9 +41,23 @@ namespace Tickets4You
             }
         }
 
-        public List<object> getEvents()
+        public List<ListEvents> getEvents(string userSessionKey)
         {
-            List<object> le = new List<object>();
+            List<ListEvents> le = new List<ListEvents>();
+            int i = 0;
+
+            RemotePost req = new RemotePost("http://tickets4you.dk/api/getEvents.php");
+            req.Timeout = 3;
+
+            req.Add("userSession", userSessionKey);
+
+            dynamic data = ParseJSON(req.Post());
+
+            while (!string.IsNullOrEmpty(data[i].eventName))
+            {
+                le.Add(new ListEvents(Convert.ToString(data[i].eventId), Convert.ToString(data[i].eventName)));
+                i++;
+            }
 
             return le;
         }

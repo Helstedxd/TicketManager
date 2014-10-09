@@ -37,7 +37,8 @@ namespace TicketManager
                     userSession = userLoginWindow.userSessionKey;
                     
                     Tickets4YouManager t4y = new Tickets4YouManager("test");
-
+                    List<ListEvents> test = t4y.getEvents(userSession);
+                    //selectEvent.ItemsSource = test;
   
                 }
                 else

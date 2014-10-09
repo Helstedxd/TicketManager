@@ -1,11 +1,11 @@
 ﻿<Window x:Class="TicketManager.userLogin"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Login" Height="230" Width="308" WindowStyle="ToolWindow" MaxHeight="230" MinHeight="230" MaxWidth="308" MinWidth="308">
+        Title="Login" Height="230" Width="318" WindowStyle="ToolWindow" MaxHeight="230" MinHeight="230" MaxWidth="318" MinWidth="318">
     <Grid>
-        <Image HorizontalAlignment="Left" Height="100" Name="MainLogo" VerticalAlignment="Top" Width="300"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,105,0,0" TextWrapping="Wrap" Name="Username" VerticalAlignment="Top" Width="280"/>
-        <PasswordBox HorizontalAlignment="Left" Height="23" Margin="10,133,0,0" Width="280" Name="Password" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="100" Name="MainLogo" VerticalAlignment="Top" Width="300" Source="Resources/Logo.png"/>
+        <TextBox HorizontalAlignment="Left" BorderBrush="Black" Height="23" Margin="10,105,0,0" TextWrapping="Wrap" Name="Username" VerticalAlignment="Top" Width="280"/>
+        <PasswordBox HorizontalAlignment="Left" BorderBrush="Black" Height="23" Margin="10,133,0,0" Width="280" Name="Password" VerticalAlignment="Top"/>
         <Button Content="Login" HorizontalAlignment="Left" Margin="10,161,0,0" VerticalAlignment="Top" Width="280" Click="Button_Click"/>
 
     </Grid>

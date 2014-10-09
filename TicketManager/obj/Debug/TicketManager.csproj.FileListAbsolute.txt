@@ -1,18 +1,3 @@
-c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\TicketManager\bin\Debug\TicketManager.exe.config
-c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\TicketManager\bin\Debug\TicketManager.exe
-c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\TicketManager\bin\Debug\TicketManager.pdb
-c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.csprojResolveAssemblyReference.cache
-c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\TicketManager\obj\Debug\MainWindow.baml
-c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\TicketManager\obj\Debug\userLogin.baml
-c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\TicketManager\obj\Debug\MainWindow.g.cs
-c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\TicketManager\obj\Debug\userLogin.g.cs
-c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\TicketManager\obj\Debug\App.g.cs
-c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager_MarkupCompile.cache
-c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.g.resources
-c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.Properties.Resources.resources
-c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.csproj.GenerateResource.Cache
-c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.exe
-c:\users\helstedlaptop\documents\visual studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.pdb
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\TicketManager.exe.config
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\TicketManager.exe
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\TicketManager.pdb
@@ -34,9 +19,26 @@ C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\HashSt
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\HashString.pdb
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\Tickets4You.dll
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\Tickets4You.pdb
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\TicketManager.exe.config
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\TicketManager.exe
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\TicketManager.pdb
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\Tickets4You.dll
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\HttpPoster.dll
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\HashString.dll
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\Tickets4You.pdb
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\HttpPoster.pdb
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\HashString.pdb
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.csprojResolveAssemblyReference.cache
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\MainWindow.baml
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\userLogin.baml
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\MainWindow.g.cs
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\userLogin.g.cs
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\App.g.cs
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager_MarkupCompile.cache
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.g.resources
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.Properties.Resources.resources
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.csproj.GenerateResource.Cache
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.exe
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.pdb
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\TicketManager.exe.CodeAnalysisLog.xml
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\TicketManager.exe.lastcodeanalysissucceeded

@@ -10,16 +10,20 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                         <ColumnDefinition Width="300"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <ListView x:Name="listView">
+                    <ListView x:Name="listView" Grid.Column="0">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Ticket ID" Width="100" DisplayMemberBinding="{Binding returnTicketId}"/>
                                 <GridViewColumn Header="Name" Width="200" DisplayMemberBinding="{Binding returnName}"/>
-                                <GridViewColumn Header="Ticket Purchased" Width="100" DisplayMemberBinding="{Binding Id}"/>
+                                <GridViewColumn Header="Ticket Purchased" Width="150" DisplayMemberBinding="{Binding pDate}"/>
+                                <GridViewColumn Header="Ticket Used" Width="150" DisplayMemberBinding="{Binding uDate}"/>
                                 <GridViewColumn Header="Ticket Valid" Width="100" DisplayMemberBinding="{Binding stage}"/>
                             </GridView>
                         </ListView.View>
                     </ListView>
+                    <ComboBox Grid.Column="1" Name="selectEvent" SelectedIndex="0" VerticalAlignment="Top" Width="275" HorizontalAlignment="Right" Margin="0,10,10,0">
+                        <ComboBoxItem>My first item</ComboBoxItem>
+                    </ComboBox>
                 </Grid>
             </TabItem>
             <TabItem Header="Scan Ticket">

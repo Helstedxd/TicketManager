@@ -13,17 +13,19 @@ namespace TicketManager
 
     class Ticket
     {
-        private long ticketId;
+        private string ticketId;
         private string ticketName;
         private bool isValid = true;
+        private DateTime purchaseTime = DateTime.Now;
+        private DateTime usedTime = DateTime.MinValue;
 
-        public Ticket(long Id, string name)
+        public Ticket(string Id, string name)
         {
             ticketId = Id;
             ticketName = name;
         }
 
-        
+
         public void SetStage()
         {
             if (isValid)
@@ -36,7 +38,7 @@ namespace TicketManager
             }
         }
 
-        public long returnTicketId
+        public string returnTicketId
         {
             get
             {
@@ -60,9 +62,33 @@ namespace TicketManager
             }
         }
 
+        public DateTime pDate
+        {
+            get
+            {
+                return purchaseTime;
+            }
+        }
+
+        public string uDate
+        {
+            get
+            {
+                if (usedTime == DateTime.MinValue)
+                {
+                    return "Ikke Brugt";
+                }
+                else
+                {
+                    return usedTime.ToString();
+                }
+            }
+        }
+
         public override string ToString()
         {
-            if(isValid){
+            if (isValid)
+            {
                 return ticketName + "'s billet er valid";
             }
             else

@@ -28,7 +28,7 @@ namespace TicketManager
             InitializeComponent();
             listView.ItemsSource = StaticTicketItems.Tickets;
 
-            if (userSession.Length == 1)
+            if (userSession.Length == 0)
             {
                 userLogin userLoginWindow = new userLogin();
                 if (userLoginWindow.ShowDialog() == true)
@@ -41,10 +41,30 @@ namespace TicketManager
                 }
             }
 
-            Ticket x = new Ticket(9781447920113, "Kasper Helsted");
+            for (int i = 0; i < 20; i++)
+            {
+                Guid g = Guid.NewGuid();
+                string GuidString = Convert.ToBase64String(g.ToByteArray());
+                GuidString = GuidString.Replace("=", "");
+                GuidString = GuidString.Replace("+", "");
+                GuidString = GuidString.Replace("/", "");
+                StaticTicketItems.Tickets.Add(new Ticket(GuidString, GuidString));
+            }
+
+            Ticket x = new Ticket("9781447920113", "Kasper Helsted");
             StaticTicketItems.Tickets.Add(x);
-            Ticket z = new Ticket(9788777511530, "Kasper Hartvig Laursen");
+            Ticket z = new Ticket("9788777511530", "Kasper Hartvig Laursen");
             StaticTicketItems.Tickets.Add(z);
+
+            for (int i = 0; i < 20; i++)
+            {
+                Guid g = Guid.NewGuid();
+                string GuidString = Convert.ToBase64String(g.ToByteArray());
+                GuidString = GuidString.Replace("=", "");
+                GuidString = GuidString.Replace("+", "");
+                GuidString = GuidString.Replace("/", "");
+                StaticTicketItems.Tickets.Add(new Ticket(GuidString, GuidString));
+            }
         }
 
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
@@ -81,7 +101,7 @@ namespace TicketManager
         {
             if (!string.IsNullOrEmpty(CreateTicketName.Text) && !string.IsNullOrEmpty(CreateTicketTicketId.Text))
             {
-                long test = (long)Convert.ToInt64(CreateTicketTicketId.Text);
+                string test = CreateTicketTicketId.Text;
                 Ticket t = new Ticket(test, CreateTicketName.Text);
                 StaticTicketItems.Tickets.Add(t);
                 listView.Items.Refresh();

@@ -21,33 +21,27 @@ namespace TicketManager
     /// </summary>
     public partial class userLogin : Window
     {
+        public string userSessionKey = null;
+
         public userLogin()
         {
             InitializeComponent();
-        }
-
-        public void getUserData(){
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Tickets4YouManager t4y = new Tickets4YouManager("test");
 
-            bool test = t4y.userLogin(Username.Text, Password.Password);
-            MessageBox.Show(test.ToString());
-            /*
-            if (Convert.ToBoolean(response))
+            bool userLoginResponse = t4y.userLogin(Username.Text, Password.Password);
+            if (userLoginResponse)
             {
+                userSessionKey = t4y.getUserSession();
                 DialogResult = true;
             }
             else
             {
-                MessageBox.Show("Err0r");
+                MessageBox.Show("Login failed");
             }
-            */
-
-            //this.Close();
         }
     }
 }

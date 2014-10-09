@@ -33,7 +33,7 @@ namespace TicketManager
                 userLogin userLoginWindow = new userLogin();
                 if (userLoginWindow.ShowDialog() == true)
                 {
-                    MessageBox.Show("test");
+                    userSession = userLoginWindow.userSessionKey;
                 }
                 else
                 {

@@ -41,30 +41,12 @@ namespace TicketManager
                 }
             }
 
-            for (int i = 0; i < 20; i++)
-            {
-                Guid g = Guid.NewGuid();
-                string GuidString = Convert.ToBase64String(g.ToByteArray());
-                GuidString = GuidString.Replace("=", "");
-                GuidString = GuidString.Replace("+", "");
-                GuidString = GuidString.Replace("/", "");
-                StaticTicketItems.Tickets.Add(new Ticket(GuidString, GuidString));
-            }
-
             Ticket x = new Ticket("9781447920113", "Kasper Helsted");
             StaticTicketItems.Tickets.Add(x);
             Ticket z = new Ticket("9788777511530", "Kasper Hartvig Laursen");
             StaticTicketItems.Tickets.Add(z);
 
-            for (int i = 0; i < 20; i++)
-            {
-                Guid g = Guid.NewGuid();
-                string GuidString = Convert.ToBase64String(g.ToByteArray());
-                GuidString = GuidString.Replace("=", "");
-                GuidString = GuidString.Replace("+", "");
-                GuidString = GuidString.Replace("/", "");
-                StaticTicketItems.Tickets.Add(new Ticket(GuidString, GuidString));
-            }
+            selectEvent.Items.Add("test");
         }
 
         private void OnKeyDownHandler(object sender, KeyEventArgs e)

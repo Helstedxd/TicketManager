@@ -22,7 +22,7 @@
                         </ListView.View>
                     </ListView>
                     <ComboBox Grid.Column="1" Name="selectEvent" SelectedIndex="0" VerticalAlignment="Top" Width="275" HorizontalAlignment="Right" Margin="0,10,10,0">
-                        <ComboBoxItem>My first item</ComboBoxItem>
+                        <ComboBoxItem Visibility="Collapsed">Choose event</ComboBoxItem>
                     </ComboBox>
                 </Grid>
             </TabItem>

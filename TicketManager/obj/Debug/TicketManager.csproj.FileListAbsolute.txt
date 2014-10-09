@@ -40,5 +40,3 @@ C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\Ticke
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.csproj.GenerateResource.Cache
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.exe
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.pdb
-C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\TicketManager.exe.CodeAnalysisLog.xml
-C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\TicketManager.exe.lastcodeanalysissucceeded

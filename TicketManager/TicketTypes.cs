@@ -31,10 +31,7 @@ namespace TicketManager
             if (isValid)
             {
                 isValid = false;
-            }
-            else
-            {
-                isValid = true;
+                usedTime = DateTime.Now;
             }
         }
 

@@ -28,12 +28,7 @@ namespace Tickets4You
             req.Add("Username", Username);
             req.Add("Password", HashBuilder.GetHashString(Password));
 
-            string response = req.Post();
-
-            var serializer = new JavaScriptSerializer();
-            serializer.RegisterConverters(new[] { new DynamicJsonConverter() });
-
-            dynamic data = serializer.Deserialize(response, typeof(object));
+            dynamic data = ParseJSON(req.Post());
 
             if (Convert.ToBoolean(data.response))
             {
@@ -56,6 +51,16 @@ namespace Tickets4You
             {
                 return userSession;
             }
+        }
+
+        private dynamic ParseJSON(string JSONString)
+        {
+            var serializer = new JavaScriptSerializer();
+            serializer.RegisterConverters(new[] { new DynamicJsonConverter() });
+
+            dynamic data = serializer.Deserialize(JSONString, typeof(object));
+
+            return data;
         }
     }
 }

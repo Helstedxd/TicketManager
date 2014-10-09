@@ -26,9 +26,9 @@ namespace TicketManager
         public MainWindow()
         {
             InitializeComponent();
-            TicketsListBox.ItemsSource = StaticTicketItems.Tickets;
+            listView.ItemsSource = StaticTicketItems.Tickets;
 
-            if (userSession.Length == 0)
+            if (userSession.Length == 1)
             {
                 userLogin userLoginWindow = new userLogin();
                 if (userLoginWindow.ShowDialog() == true)
@@ -61,7 +61,7 @@ namespace TicketManager
                         if (t.stage)
                         {
                             t.SetStage();
-                            TicketsListBox.Items.Refresh();
+                            listView.Items.Refresh();
                         }
                         else
                         {
@@ -84,7 +84,7 @@ namespace TicketManager
                 long test = (long)Convert.ToInt64(CreateTicketTicketId.Text);
                 Ticket t = new Ticket(test, CreateTicketName.Text);
                 StaticTicketItems.Tickets.Add(t);
-                TicketsListBox.Items.Refresh();
+                listView.Items.Refresh();
             }
         }
     }

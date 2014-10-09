@@ -44,6 +44,14 @@ namespace TicketManager
             }
         }
 
+        public string returnName
+        {
+            get
+            {
+                return ticketName;
+            }
+        }
+
         public bool stage
         {
             get

@@ -41,7 +41,7 @@ namespace TicketManager
             }
             else
             {
-                MessageBox.Show("Login failed");
+                MessageBox.Show("Login failed", "Err0r");
             }
         }
     }

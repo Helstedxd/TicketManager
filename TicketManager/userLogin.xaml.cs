@@ -34,8 +34,8 @@ namespace TicketManager
         {
             Tickets4YouManager t4y = new Tickets4YouManager("test");
 
-            string test = t4y.userLogin(Username.Text, Password.Password);
-            MessageBox.Show(test);
+            bool test = t4y.userLogin(Username.Text, Password.Password);
+            MessageBox.Show(test.ToString());
             /*
             if (Convert.ToBoolean(response))
             {

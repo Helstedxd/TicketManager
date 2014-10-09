@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using HttpPoster;
 using HashString;
-
+using System.Xml;
+using System.IO;
+using System.Web.Script.Serialization;
 
 namespace Tickets4You
 {
@@ -18,7 +20,7 @@ namespace Tickets4You
             APIKey = key;
         }
 
-        public string userLogin(string Username, string Password)
+        public bool userLogin(string Username, string Password)
         {
             RemotePost req = new RemotePost("http://tickets4you.dk/api/login.php");
             req.Timeout = 3;
@@ -28,7 +30,20 @@ namespace Tickets4You
 
             string response = req.Post();
 
-            return response;
+            var serializer = new JavaScriptSerializer();
+            serializer.RegisterConverters(new[] { new DynamicJsonConverter() });
+
+            dynamic data = serializer.Deserialize(response, typeof(object));
+
+            if (Convert.ToBoolean(data.response))
+            {
+                userSession = data.key;
+                return Convert.ToBoolean(data.response);
+            }
+            else
+            {
+                return Convert.ToBoolean(data.response);
+            }
         }
 
         public string getUserSession()
@@ -41,13 +56,6 @@ namespace Tickets4You
             {
                 return userSession;
             }
-        }
-
-        private List<string> parseXML(string XMLString)
-        {
-            List<string> test = new List<string>();
-
-            return test;
         }
     }
 }

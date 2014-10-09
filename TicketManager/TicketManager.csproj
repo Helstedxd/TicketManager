@@ -55,6 +55,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Http.cs" />
+    <Compile Include="ListEvents.cs" />
     <Compile Include="TicketTypes.cs" />
     <Compile Include="userLogin.xaml.cs">
       <DependentUpon>userLogin.xaml</DependentUpon>

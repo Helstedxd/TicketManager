@@ -43,6 +43,7 @@
     <Compile Include="Classes.cs" />
     <Compile Include="JSONParser.cs" />
     <Compile Include="ListEvents.cs" />
+    <Compile Include="Ticket.cs" />
     <Compile Include="Tickets4You.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -3,17 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tickets4You;
 
-namespace TicketManager
+namespace Tickets4You
 {
-    class StaticTicketItems
-    {
-        public static List<Ticket> Tickets = new List<Ticket>();
-        public static List<ListEvents> ListEvents = new List<ListEvents>();
-    }
-
-    class Ticket
+    public class Ticket
     {
         private string ticketId;
         private string ticketName;
@@ -21,10 +14,12 @@ namespace TicketManager
         private DateTime purchaseTime = DateTime.Now;
         private DateTime usedTime = DateTime.MinValue;
 
-        public Ticket(string Id, string name)
+        public Ticket(string Id, string name, DateTime pDate, bool valid)
         {
             ticketId = Id;
             ticketName = name;
+            purchaseTime = pDate;
+            isValid = valid;
         }
 
 

@@ -22,7 +22,8 @@ namespace TicketManager
     public partial class MainWindow : Window
     {
         private string userSession = "";
-        
+        public const double version = 0.1;
+        Tickets4YouManager t4y = new Tickets4YouManager("test");        
 
         public MainWindow()
         {
@@ -37,11 +38,9 @@ namespace TicketManager
                 {
                     userSession = userLoginWindow.userSessionKey;
                     
-                    Tickets4YouManager t4y = new Tickets4YouManager("test");
                     StaticTicketItems.ListEvents.Add(new ListEvents(null, "Choose Event"));                    
                     StaticTicketItems.ListEvents.AddRange(t4y.getEvents(userSession));
                     selectEvent.Items.Refresh();
-  
                 }
                 else
                 {
@@ -52,6 +51,7 @@ namespace TicketManager
 
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
+            /*
             if (e.Key == Key.Return)
             {
                 bool ticketFound = false;
@@ -78,25 +78,22 @@ namespace TicketManager
                 }
                 TicketBox.Text = "";
             }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            if (!string.IsNullOrEmpty(CreateTicketName.Text) && !string.IsNullOrEmpty(CreateTicketTicketId.Text))
-            {
-                string test = CreateTicketTicketId.Text;
-                Ticket t = new Ticket(test, CreateTicketName.Text);
-                StaticTicketItems.Tickets.Add(t);
-                listView.Items.Refresh();
-            }
+            */
         }
 
         private void selectEvent_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (!string.IsNullOrEmpty(StaticTicketItems.ListEvents[selectEvent.SelectedIndex].getEventId))
             {
-                MessageBox.Show(StaticTicketItems.ListEvents[selectEvent.SelectedIndex].getEventId);
+                StaticTicketItems.Tickets.Clear();
+                StaticTicketItems.Tickets.AddRange(t4y.getAllTickets(StaticTicketItems.ListEvents[selectEvent.SelectedIndex].getEventId, userSession));
+                listView.Items.Refresh();
             }
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

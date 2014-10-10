@@ -3,43 +3,34 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" MinWidth="800" MinHeight="500">
     <Grid>
-        <TabControl Margin="0,0,0,0">
-            <TabItem Header="Tickets">
-                <Grid Background="#FFE5E5E5" Margin="0,-7,0,7">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="300"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <ListView x:Name="listView" Grid.Column="0">
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn Header="Ticket ID" Width="100" DisplayMemberBinding="{Binding returnTicketId}"/>
-                                <GridViewColumn Header="Name" Width="200" DisplayMemberBinding="{Binding returnName}"/>
-                                <GridViewColumn Header="Ticket Purchased" Width="150" DisplayMemberBinding="{Binding pDate}"/>
-                                <GridViewColumn Header="Ticket Used" Width="150" DisplayMemberBinding="{Binding uDate}"/>
-                                <GridViewColumn Header="Ticket Valid" Width="100" DisplayMemberBinding="{Binding stage}"/>
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
-                    <ComboBox Grid.Column="1" SelectedIndex="0" VerticalAlignment="Top" Width="275" HorizontalAlignment="Right" Margin="0,10,10,0" Name="selectEvent" SelectionChanged="selectEvent_SelectionChanged" />
-                </Grid>
-            </TabItem>
-            <TabItem Header="Scan Ticket">
-                <Grid Background="#FFE5E5E5">
-                    <TextBox KeyDown="OnKeyDownHandler" Name="TicketBox" HorizontalAlignment="Left" Height="23" Margin="88,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <Button Content="Button" HorizontalAlignment="Left" Margin="213,60,0,0" VerticalAlignment="Top" Width="75"/>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Add Ticket">
-                <Grid Background="#FFE5E5E5">
-                    <TextBox HorizontalAlignment="Left" Name="CreateTicketName" Height="23" Margin="105,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox HorizontalAlignment="Left" Name="CreateTicketTicketId" Height="23" Margin="105,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <Label Content="Navn" Height="23" HorizontalAlignment="Left" Margin="62,10,0,0" VerticalAlignment="Top"/>
-                    <Label Content="TicketId (temp)" Height="23" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top"/>
-                    <Button Content="Create" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="215" Click="Button_Click"/>
-                </Grid>
-            </TabItem>
-        </TabControl>
+        <Menu IsMainMenu="True" VerticalAlignment="Top" Height="20">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Create new ticket"></MenuItem>
+                <MenuItem Header="_Edit ticket"></MenuItem>
+                <MenuItem Header="_Delete ticket"></MenuItem>
+                <Separator/>
+                <MenuItem Header="Exit" Click="MenuItem_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <Grid Background="#FFE5E5E5" Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="300"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ListView x:Name="listView" Grid.Column="0">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Ticket ID" Width="100" DisplayMemberBinding="{Binding returnTicketId}"/>
+                        <GridViewColumn Header="Name" Width="200" DisplayMemberBinding="{Binding returnName}"/>
+                        <GridViewColumn Header="Ticket Purchased" Width="150" DisplayMemberBinding="{Binding pDate}"/>
+                        <GridViewColumn Header="Ticket Used" Width="150" DisplayMemberBinding="{Binding uDate}"/>
+                        <GridViewColumn Header="Ticket Valid" Width="100" DisplayMemberBinding="{Binding stage}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ComboBox Grid.Column="1" SelectedIndex="0" VerticalAlignment="Top" Width="275" HorizontalAlignment="Right" Margin="0,10,10,0" Name="selectEvent" SelectionChanged="selectEvent_SelectionChanged" />
+        </Grid>
 
     </Grid>
 </Window>

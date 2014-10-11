@@ -9,6 +9,8 @@
                 <MenuItem Header="_Edit ticket"></MenuItem>
                 <MenuItem Header="_Delete ticket"></MenuItem>
                 <Separator/>
+                <MenuItem Header="_Settings"></MenuItem>
+                <Separator/>
                 <MenuItem Header="Exit" Click="MenuItem_Click"></MenuItem>
             </MenuItem>
         </Menu>
@@ -33,7 +35,7 @@
             <Expander Grid.Column="1" Header="Scan Ticket" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="280">
                 <StackPanel Margin="10,4,0,0">
                     <Label Content="Ticket Id:" HorizontalAlignment="Left" Margin="0,0,0,0"  VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Height="24" Margin="60,-28,0,0" TextWrapping="Wrap" Name="TicketId" Width="198"/>
+                    <TextBox HorizontalAlignment="Left" Height="24" Margin="60,-28,0,0" TextWrapping="Wrap" Name="TicketId" Width="198" KeyDown="OnKeyDownHandler"/>
 
                     <Button Content="Validate Ticket" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="248"/>
                 </StackPanel>

@@ -51,13 +51,12 @@ namespace TicketManager
 
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
-            /*
             if (e.Key == Key.Return)
             {
                 bool ticketFound = false;
                 foreach (Ticket t in StaticTicketItems.Tickets)
                 {
-                    if (t.returnTicketId.ToString() == TicketBox.Text)
+                    if (t.returnTicketId == TicketId.Text)
                     {
                         ticketFound = true;
 
@@ -76,9 +75,8 @@ namespace TicketManager
                 {
                     MessageBox.Show("Ticket not found!");
                 }
-                TicketBox.Text = "";
+                TicketId.Text = "";
             }
-            */
         }
 
         private void selectEvent_SelectionChanged(object sender, SelectionChangedEventArgs e)

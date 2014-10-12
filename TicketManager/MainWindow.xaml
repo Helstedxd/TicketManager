@@ -47,7 +47,7 @@
                     <Button Content="Validate Ticket" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="248"/>
                 </StackPanel>
             </Expander>
-            <Button Content="Test button: print pdf" Name="debugPdfPrint" Grid.Column="1" HorizontalAlignment="Left" Margin="140,453,0,0" VerticalAlignment="Top" Width="150" Click="debugPdfPrint_Click"/>
+            <Button Content="Test button: print pdf" Name="debugPdfPrint" Grid.Column="1" HorizontalAlignment="Left" Margin="140,453,0,0" VerticalAlignment="Top" Width="150" Click="scrollToIndexItem"/>
         </Grid>
 
     </Grid>

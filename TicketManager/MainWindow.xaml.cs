@@ -105,5 +105,11 @@ namespace TicketManager
             DownloadAndPrintPdf dapp = new DownloadAndPrintPdf("http://tickets4you.dk/api/test.pdf");
             dapp.ShowDialog();
         }
+
+        private void scrollToIndexItem(object sender, RoutedEventArgs e)
+        {
+            listView.SelectedItem = StaticTicketItems.Tickets[999];
+            listView.ScrollIntoView(StaticTicketItems.Tickets[1005]);
+        }
     }
 }

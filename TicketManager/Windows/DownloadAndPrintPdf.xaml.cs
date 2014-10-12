@@ -51,7 +51,7 @@ namespace TicketManager
             }
 
             client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(client_DownloadProgressChanged);
-            //client.DownloadFileCompleted += new AsyncCompletedEventHandler(client_DownloadFileCompleted);
+            client.DownloadFileCompleted += new AsyncCompletedEventHandler(client_DownloadFileCompleted);
             
             // Starts the download
             client.DownloadFileAsync(new Uri(downloadUrl), downloadLocation + downloadFileName);

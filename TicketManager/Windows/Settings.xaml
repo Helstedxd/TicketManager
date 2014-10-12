@@ -1,0 +1,11 @@
+﻿<Window x:Class="TicketManager.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Settings" Height="300" WindowStyle="ToolWindow" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Offline Copy:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <CheckBox Name="offlineCopy" HorizontalAlignment="Left" Margin="88,19,0,0" VerticalAlignment="Top"/>
+        <Button Content="Save Setting" Name="saveSetting" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Click="saveSetting_Click"/>
+
+    </Grid>
+</Window>

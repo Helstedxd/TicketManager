@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Login" Height="230" Width="318" WindowStyle="ToolWindow" MaxHeight="230" MinHeight="230" MaxWidth="318" MinWidth="318">
     <Grid>
-        <Image HorizontalAlignment="Left" Height="100" Name="MainLogo" VerticalAlignment="Top" Width="300" Source="Resources/Logo.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Name="MainLogo" VerticalAlignment="Top" Width="300" Source="../Resources/Logo.png"/>
         <TextBox TabIndex="1" HorizontalAlignment="Left" BorderBrush="Black" Height="23" Margin="10,105,0,0" TextWrapping="Wrap" Name="Username" Text="Helstedxd" VerticalAlignment="Top" Width="280"/>
         <PasswordBox TabIndex="2" HorizontalAlignment="Left" BorderBrush="Black" Height="23" Margin="10,133,0,0" Width="280" Name="Password" Password="qw12qw12" VerticalAlignment="Top"/>
         <Button Content="Login" TabIndex="3" HorizontalAlignment="Left" Margin="10,161,0,0" VerticalAlignment="Top" Width="280" Click="Button_Click"/>

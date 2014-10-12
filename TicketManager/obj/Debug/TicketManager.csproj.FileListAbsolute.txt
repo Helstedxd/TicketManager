@@ -5,9 +5,7 @@ C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\Ticket
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\TicketManager.pdb
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\TicketManager.csprojResolveAssemblyReference.cache
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\MainWindow.baml
-C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\userLogin.baml
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\MainWindow.g.cs
-C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\userLogin.g.cs
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\App.g.cs
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\TicketManager_MarkupCompile.cache
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\TicketManager.g.resources
@@ -40,3 +38,11 @@ C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\Ticke
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.csproj.GenerateResource.Cache
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.exe
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.pdb
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\Windows\Settings.baml
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\Windows\userLogin.baml
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\Windows\Settings.g.cs
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\Windows\userLogin.g.cs
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\Windows\DownloadAndPrintPdf.baml
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\Windows\DownloadAndPrintPdf.g.cs
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\Newtonsoft.Json.xml

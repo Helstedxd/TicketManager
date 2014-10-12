@@ -9,9 +9,9 @@
                 <MenuItem Header="_Edit ticket"></MenuItem>
                 <MenuItem Header="_Delete ticket"></MenuItem>
                 <Separator/>
-                <MenuItem Header="_Settings"></MenuItem>
+                <MenuItem Header="_Settings" Click="MenuItemSettings"></MenuItem>
                 <Separator/>
-                <MenuItem Header="Exit" Click="MenuItem_Click"></MenuItem>
+                <MenuItem Header="Exit" Click="MenuItemExit"></MenuItem>
             </MenuItem>
         </Menu>
 
@@ -20,7 +20,14 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="300"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <ListView x:Name="listView" Grid.Column="0">
+            <ListView x:Name="listView" Grid.Column="0" SelectionMode="Single">
+                <ListView.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Print Ticket" Command="{Binding RemoveItem}" CommandParameter="{Binding ElementName=itemsListView, Path=SelectedItem}" />
+                        <MenuItem Header="Edit Ticket" Command="{Binding RemoveItem}" CommandParameter="{Binding ElementName=itemsListView, Path=SelectedItem}" />
+                        <MenuItem Header="Delete Ticket" Command="{Binding RemoveItem}" CommandParameter="{Binding ElementName=itemsListView, Path=SelectedItem}" />
+                    </ContextMenu>
+                </ListView.ContextMenu>
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Ticket ID" Width="100" DisplayMemberBinding="{Binding returnTicketId}"/>
@@ -40,6 +47,7 @@
                     <Button Content="Validate Ticket" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="248"/>
                 </StackPanel>
             </Expander>
+            <Button Content="Test button: print pdf" Name="debugPdfPrint" Grid.Column="1" HorizontalAlignment="Left" Margin="140,453,0,0" VerticalAlignment="Top" Width="150" Click="debugPdfPrint_Click"/>
         </Grid>
 
     </Grid>

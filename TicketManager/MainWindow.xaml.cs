@@ -23,7 +23,7 @@ namespace TicketManager
     {
         private string userSession = "";
         public const double version = 0.1;
-        Tickets4YouManager t4y = new Tickets4YouManager("test");        
+        Tickets4YouManager t4y = new Tickets4YouManager("test");
 
         public MainWindow()
         {
@@ -89,9 +89,21 @@ namespace TicketManager
             }
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void MenuItemExit(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void MenuItemSettings(object sender, RoutedEventArgs e)
+        {
+            Settings settings = new Settings();
+            settings.ShowDialog();
+        }
+
+        private void debugPdfPrint_Click(object sender, RoutedEventArgs e)
+        {
+            DownloadAndPrintPdf dapp = new DownloadAndPrintPdf("http://tickets4you.dk/api/test.pdf");
+            dapp.ShowDialog();
         }
     }
 }

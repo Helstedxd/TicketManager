@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\App.xaml
-2-218482771
+4-3923282
 
-8-1614833269
+11-673269998
 14700099431
-MainWindow.xaml;userLogin.xaml;
+Windows\DownloadAndPrintPdf.xaml;MainWindow.xaml;Windows\Settings.xaml;Windows\userLogin.xaml;
 
 False
 

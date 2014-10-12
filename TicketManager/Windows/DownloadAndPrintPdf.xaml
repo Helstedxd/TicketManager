@@ -1,7 +1,7 @@
 ﻿<Window x:Class="TicketManager.DownloadAndPrintPdf"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="DownloadAndPrintPdf" Height="85" Width="510" ResizeMode="NoResize" WindowStyle="ToolWindow">
+        Title="DownloadAndPrintPdf" Height="85" Width="510" ResizeMode="NoResize" WindowStyle="ToolWindow" Closing="Window_Closing">
     <Grid>
         <ProgressBar HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" VerticalAlignment="Top" Name="downloadProgressBar" Width="474"/>
 

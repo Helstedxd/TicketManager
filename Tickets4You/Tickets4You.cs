@@ -25,7 +25,7 @@ namespace Tickets4You
 
         public bool userLogin(string Username, string Password)
         {
-            RemotePost req = new RemotePost("http://tickets4you.dk/api/login.php");
+            RemotePost req = new RemotePost("http://tickets4you.dk/api/login");
             req.Timeout = 3;
 
             req.Add("Username", Username);
@@ -43,7 +43,7 @@ namespace Tickets4You
 
         public List<ListEvents> getEvents(string userSessionKey)
         {
-            RemotePost req = new RemotePost("http://tickets4you.dk/api/getEvents.php");
+            RemotePost req = new RemotePost("http://tickets4you.dk/api/getEvents");
             req.Timeout = 3;
 
             req.Add("userSession", userSessionKey);
@@ -55,7 +55,7 @@ namespace Tickets4You
 
         public List<Ticket> getAllTickets(string eventId, string userSessionKey)
         {
-            RemotePost req = new RemotePost("http://tickets4you.dk/api/getTickets.php");
+            RemotePost req = new RemotePost("http://tickets4you.dk/api/getTickets");
             req.Timeout = 3;
 
             req.Add("userSession", userSessionKey);

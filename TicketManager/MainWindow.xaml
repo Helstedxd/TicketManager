@@ -23,7 +23,7 @@
             <ListView x:Name="listView" Grid.Column="0" SelectionMode="Single">
                 <ListView.ContextMenu>
                     <ContextMenu>
-                        <MenuItem Header="Print Ticket" Command="{Binding RemoveItem}" CommandParameter="{Binding ElementName=itemsListView, Path=SelectedItem}" />
+                        <MenuItem Header="Print Ticket" Click="debugPdfPrint_Click" Command="{Binding RemoveItem}" CommandParameter="{Binding ElementName=itemsListView, Path=SelectedItem}" />
                         <MenuItem Header="Edit Ticket" Command="{Binding RemoveItem}" CommandParameter="{Binding ElementName=itemsListView, Path=SelectedItem}" />
                         <MenuItem Header="Delete Ticket" Command="{Binding RemoveItem}" CommandParameter="{Binding ElementName=itemsListView, Path=SelectedItem}" />
                     </ContextMenu>

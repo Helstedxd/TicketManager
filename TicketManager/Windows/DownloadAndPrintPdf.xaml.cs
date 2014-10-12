@@ -26,6 +26,7 @@ namespace TicketManager
         private string downloadLocation = AppDomain.CurrentDomain.BaseDirectory.ToString() + "\\tmp\\";
         private string downloadFileName = "test.pdf";
         private string downloadUrl = null;
+        private WebClient client = new WebClient();
 
         public DownloadAndPrintPdf(string downloadUrlParameter)
         {
@@ -49,9 +50,8 @@ namespace TicketManager
             {
             }
 
-            WebClient client = new WebClient();
             client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(client_DownloadProgressChanged);
-            client.DownloadFileCompleted += new AsyncCompletedEventHandler(client_DownloadFileCompleted);
+            //client.DownloadFileCompleted += new AsyncCompletedEventHandler(client_DownloadFileCompleted);
             
             // Starts the download
             client.DownloadFileAsync(new Uri(downloadUrl), downloadLocation + downloadFileName);
@@ -70,6 +70,17 @@ namespace TicketManager
         {
             System.Diagnostics.Process.Start(downloadLocation + downloadFileName);
             Close();
+        }
+
+        private void Window_Closing(object sender, CancelEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Is Dot Net Perls awesome?", "Important Question", MessageBoxButton.YesNo);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                client.CancelAsync();
+                File.Delete(downloadLocation + downloadFileName);
+            }
         }
 
     }

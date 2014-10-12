@@ -44,7 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes.cs" />
-    <Compile Include="JSONParser.cs" />
     <Compile Include="StaticItems.cs" />
     <Compile Include="Tickets4You.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

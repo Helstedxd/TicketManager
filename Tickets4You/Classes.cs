@@ -207,4 +207,9 @@ namespace Tickets4You
         }
     }
 
+    public class UpdateReturn
+    {
+        public double version { get; set; }
+        public string downloadURL { get; set; }
+    }
 }

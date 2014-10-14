@@ -28,9 +28,7 @@ C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\Ticke
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\HashString.pdb
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.csprojResolveAssemblyReference.cache
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\MainWindow.baml
-C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\userLogin.baml
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\MainWindow.g.cs
-C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\userLogin.g.cs
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\App.g.cs
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager_MarkupCompile.cache
 C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\TicketManager.g.resources
@@ -46,3 +44,11 @@ C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\Window
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\obj\Debug\Windows\DownloadAndPrintPdf.g.cs
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Helstedxd\Documents\GitHub\TicketManager\TicketManager\bin\Debug\Newtonsoft.Json.xml
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\Newtonsoft.Json.dll
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\bin\Debug\Newtonsoft.Json.xml
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\Windows\DownloadAndPrintPdf.baml
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\Windows\Settings.baml
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\Windows\userLogin.baml
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\Windows\DownloadAndPrintPdf.g.cs
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\Windows\Settings.g.cs
+C:\Users\HelstedLaptop\Documents\Visual Studio 2013\Projects\TicketManager\TicketManager\obj\Debug\Windows\userLogin.g.cs

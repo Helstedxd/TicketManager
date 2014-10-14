@@ -28,8 +28,13 @@ namespace TicketManager
         public MainWindow()
         {
             InitializeComponent();
-            listView.ItemsSource = StaticTicketItems.Tickets.Where(t => t.isVisible == true);
+            listView.ItemsSource = StaticTicketItems.Tickets;
             selectEvent.ItemsSource = StaticTicketItems.ListEvents;
+
+            if (!string.IsNullOrEmpty(t4y.lookForUpdate("main", version)))
+            {
+                MessageBox.Show(t4y.lookForUpdate("main", version));
+            }
 
             if (userSession.Length == 0)
             {

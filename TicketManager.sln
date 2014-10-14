@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketManager", "TicketManager\TicketManager.csproj", "{C13B63B3-6A36-43E9-8303-972B89F910BA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpPoster", "HttpPoster\HttpPoster.csproj", "{47624608-8C92-41A4-8BB4-882796E242EE}"
@@ -8,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashString", "HashString\HashString.csproj", "{5711ADA4-8503-4741-B410-FA23F0643A6D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tickets4You", "Tickets4You\Tickets4You.csproj", "{F967A114-A7FD-4CFA-B87F-AD7862652F33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgramUpdater", "ProgramUpdater\ProgramUpdater.csproj", "{CD43F3FA-C2F6-46A6-9DBD-2CC29973EC55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,10 @@ Global
 		{F967A114-A7FD-4CFA-B87F-AD7862652F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F967A114-A7FD-4CFA-B87F-AD7862652F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F967A114-A7FD-4CFA-B87F-AD7862652F33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD43F3FA-C2F6-46A6-9DBD-2CC29973EC55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD43F3FA-C2F6-46A6-9DBD-2CC29973EC55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD43F3FA-C2F6-46A6-9DBD-2CC29973EC55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD43F3FA-C2F6-46A6-9DBD-2CC29973EC55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

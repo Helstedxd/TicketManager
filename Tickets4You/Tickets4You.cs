@@ -77,5 +77,24 @@ namespace Tickets4You
                 return userSession;
             }
         }
+
+        public string lookForUpdate(string item, double version)
+        {
+            RemotePost req = new RemotePost("http://tickets4you.dk/api/getVersions");
+            req.Timeout = 3;
+
+            req.Add("Item", item);
+
+            UpdateReturn ur = JsonConvert.DeserializeObject<UpdateReturn>(req.Post());
+
+            if (ur.version > version)
+            {
+                return ur.downloadURL;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

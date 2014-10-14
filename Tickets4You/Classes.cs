@@ -17,6 +17,7 @@ namespace Tickets4You
     {
         private string pTicketId;
         private string pTicketName;
+        private string pTicketMail;
         private bool pIsValid = true;
         private DateTime pPurchaseTime = DateTime.Now;
         private DateTime pUsedTime = DateTime.MinValue;
@@ -71,6 +72,22 @@ namespace Tickets4You
             set
             {
                 pIsValid = value;
+            }
+        }
+
+        public string userMail
+        {
+            set
+            {
+                pTicketMail = value;
+            }
+        }
+
+        public string getTicketMail
+        {
+            get
+            {
+                return pTicketMail;
             }
         }
 

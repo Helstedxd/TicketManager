@@ -32,6 +32,7 @@
                     <GridView>
                         <GridViewColumn Header="Ticket ID" Width="100" DisplayMemberBinding="{Binding returnTicketId}"/>
                         <GridViewColumn Header="Name" Width="200" DisplayMemberBinding="{Binding returnName}"/>
+                        <GridViewColumn Header="Mail" Width="200" DisplayMemberBinding="{Binding getTicketMail}"/>
                         <GridViewColumn Header="Ticket Purchased" Width="150" DisplayMemberBinding="{Binding pDate}"/>
                         <GridViewColumn Header="Ticket Used" Width="150" DisplayMemberBinding="{Binding uDate}"/>
                         <GridViewColumn Header="Ticket Valid" Width="100" DisplayMemberBinding="{Binding stage}"/>
@@ -48,7 +49,7 @@
             <GridSplitter Grid.Column="1" HorizontalAlignment="Left" Height="5" Margin="10,105,0,0" VerticalAlignment="Top" Width="280"/>
 
             <Label Content="Search" Grid.Column="1" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top"/>
-            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="60,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Name="SearchInput"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="60,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Name="SearchInput" KeyUp="SearchTicket_Click"/>
             <Button Content="Search For Ticket" Grid.Column="1" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" Width="280" Name="SearchTicket" Click="SearchTicket_Click"/>
 
 

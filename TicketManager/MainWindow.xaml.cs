@@ -130,7 +130,7 @@ namespace TicketManager
 
             foreach (Ticket t in StaticTicketItems.Tickets)
             {
-                if (t.returnName == SearchInput.Text)
+                if (t.returnName.Contains(SearchInput.Text) || t.getTicketMail.Contains(SearchInput.Text))
                 {
                     listView.Items.Add(t);
                 }

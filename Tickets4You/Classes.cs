@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace Tickets4You
         public string key { get; set; }
         public bool response { get; set; }
     }
-    
+
     public class Ticket
     {
         private string pTicketId;
@@ -19,6 +20,7 @@ namespace Tickets4You
         private bool pIsValid = true;
         private DateTime pPurchaseTime = DateTime.Now;
         private DateTime pUsedTime = DateTime.MinValue;
+        private bool visible = true;
 
         public Ticket(string Id, string name, DateTime pDate, bool valid, DateTime usedTime)
         {
@@ -133,6 +135,20 @@ namespace Tickets4You
                 {
                     return pUsedTime.ToString();
                 }
+            }
+        }
+
+        public bool isVisible
+        {
+            get
+            {
+                return true;
+            }
+
+            set
+            {
+                if (visible = value) return;
+                visible = value;
             }
         }
     }

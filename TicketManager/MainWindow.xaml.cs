@@ -28,7 +28,7 @@ namespace TicketManager
         public MainWindow()
         {
             InitializeComponent();
-            listView.ItemsSource = StaticTicketItems.Tickets;
+            listView.ItemsSource = StaticTicketItems.Tickets.Where(t => t.isVisible == true);
             selectEvent.ItemsSource = StaticTicketItems.ListEvents;
 
             if (userSession.Length == 0)
@@ -110,6 +110,14 @@ namespace TicketManager
         {
             listView.SelectedItem = StaticTicketItems.Tickets[999];
             listView.ScrollIntoView(StaticTicketItems.Tickets[1005]);
+        }
+
+        private void SearchTicket_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (Ticket t in StaticTicketItems.Tickets)
+            {
+                //t.v
+            }
         }
     }
 }

@@ -15,79 +15,46 @@ namespace Tickets4You
 
     public class Ticket
     {
-        private string pTicketId;
-        private string pTicketName;
-        private string pTicketMail;
-        private bool pIsValid = true;
-        private DateTime pPurchaseTime = DateTime.Now;
-        private DateTime pUsedTime = DateTime.MinValue;
-        private bool visible = true;
+        private DateTime _timePurchase, _timeUsed;
 
-        public Ticket(string Id, string name, DateTime pDate, bool valid, DateTime usedTime)
+        public Ticket(string ticketId, string ticketName, string ticketMail)
         {
-            pTicketId = Id;
-            pTicketName = name;
-            pPurchaseTime = pDate;
-            pIsValid = valid;
-            pUsedTime = usedTime;
-        }
-
-        public bool SetStage()
-        {
-            if (pIsValid)
-            {
-                pIsValid = false;
-                pUsedTime = DateTime.Now;
-                return true;
-            }
-            return false;
+            this.ticketId = ticketId;
+            this.ticketName = ticketName;
+            this.ticketMail = ticketMail;
         }
 
         public string ticketId
         {
-            set
-            {
-                pTicketId = value;
-            }
+            get;
+            set;
         }
 
         public string ticketName
         {
-            set
-            {
-                pTicketName = value;
-            }
+            get;
+            set;
+        }
+
+        public string ticketMail
+        {
+            get;
+            set;
         }
 
         public int timePurchase
         {
             set
             {
-                pPurchaseTime = StaticItems.UnixTimeStampToDateTime(Convert.ToDouble(value));
+                _timePurchase = StaticItems.UnixTimeStampToDateTime(Convert.ToDouble(value));
             }
         }
 
-        public bool valid
-        {
-            set
-            {
-                pIsValid = value;
-            }
-        }
-
-        public string userMail
-        {
-            set
-            {
-                pTicketMail = value;
-            }
-        }
-
-        public string getTicketMail
+        public DateTime returnTimePurchase
         {
             get
             {
-                return pTicketMail;
+                return _timePurchase;
             }
         }
 
@@ -95,132 +62,59 @@ namespace Tickets4You
         {
             set
             {
-                if (value == 0)
-                {
-                    pUsedTime = DateTime.MinValue;
-                }
-                else
-                {
-                    pUsedTime = StaticItems.UnixTimeStampToDateTime(Convert.ToDouble(value));
-                }
+                _timeUsed = StaticItems.UnixTimeStampToDateTime(Convert.ToDouble(value));
             }
         }
 
-        public string returnTicketId
+        public DateTime returnTimeUsed
         {
             get
             {
-                return pTicketId;
+                return _timeUsed;
             }
         }
 
-        public string returnName
+        public bool valid
         {
-            get
-            {
-                return pTicketName;
-            }
+            get;
+            set;
         }
 
-        public bool stage
+        public bool SetStage()
         {
-            get
+            if (valid)
             {
-                return pIsValid;
-            }
-        }
-
-
-        public DateTime pDate
-        {
-            get
-            {
-                return pPurchaseTime;
-            }
-        }
-
-
-        public string uDate
-        {
-            get
-            {
-                if (pUsedTime == DateTime.MinValue)
-                {
-                    return "Ikke Brugt";
-                }
-                else
-                {
-                    return pUsedTime.ToString();
-                }
-            }
-        }
-
-        public bool isVisible
-        {
-            get
-            {
+                valid = false;
+                _timeUsed = DateTime.Now;
                 return true;
             }
-
-            set
-            {
-                if (visible = value) return;
-                visible = value;
-            }
+            return false;
         }
     }
 
     public class ListEvents
     {
-        private string pEventId = null, pEventName = null;
-
         public ListEvents(string id, string name)
         {
-            pEventId = id;
-            pEventName = name;
-        }
-
-        public string getEventName
-        {
-            get
-            {
-                return pEventName;
-            }
-        }
-
-        public string getEventId
-        {
-            get
-            {
-                return pEventId;
-            }
+            eventId = id;
+            eventName = name;
         }
 
         public override string ToString()
         {
-            return pEventName;
+            return eventName;
         }
 
         public string eventId
         {
-            set
-            {
-                if (string.IsNullOrEmpty(pEventId))
-                {
-                    pEventId = value;
-                }
-            }
+            set;
+            get;
         }
 
         public string eventName
         {
-            set
-            {
-                if (string.IsNullOrEmpty(pEventName))
-                {
-                    pEventName = value;
-                }
-            }
+            set;
+            get;
         }
     }
 

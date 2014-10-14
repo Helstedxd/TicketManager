@@ -30,12 +30,12 @@
                 </ListView.ContextMenu>
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Ticket ID" Width="100" DisplayMemberBinding="{Binding returnTicketId}"/>
-                        <GridViewColumn Header="Name" Width="200" DisplayMemberBinding="{Binding returnName}"/>
-                        <GridViewColumn Header="Mail" Width="200" DisplayMemberBinding="{Binding getTicketMail}"/>
-                        <GridViewColumn Header="Ticket Purchased" Width="150" DisplayMemberBinding="{Binding pDate}"/>
-                        <GridViewColumn Header="Ticket Used" Width="150" DisplayMemberBinding="{Binding uDate}"/>
-                        <GridViewColumn Header="Ticket Valid" Width="100" DisplayMemberBinding="{Binding stage}"/>
+                        <GridViewColumn Header="Ticket ID" Width="100" DisplayMemberBinding="{Binding ticketId}"/>
+                        <GridViewColumn Header="Name" Width="200" DisplayMemberBinding="{Binding ticketName}"/>
+                        <GridViewColumn Header="Mail" Width="200" DisplayMemberBinding="{Binding ticketMail}"/>
+                        <GridViewColumn Header="Ticket Purchased" Width="150" DisplayMemberBinding="{Binding returnTimePurchase}"/>
+                        <GridViewColumn Header="Ticket Used" Width="150" DisplayMemberBinding="{Binding returnTimeUsed}"/>
+                        <GridViewColumn Header="Ticket Valid" Width="100" DisplayMemberBinding="{Binding valid}"/>
                     </GridView>
                 </ListView.View>
             </ListView>

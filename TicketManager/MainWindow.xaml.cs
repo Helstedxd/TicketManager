@@ -61,11 +61,11 @@ namespace TicketManager
                 bool ticketFound = false;
                 foreach (Ticket t in StaticTicketItems.Tickets)
                 {
-                    if (t.returnTicketId == TicketId.Text)
+                    if (t.ticketId == TicketId.Text)
                     {
                         ticketFound = true;
 
-                        if (t.stage)
+                        if (t.valid)
                         {
                             t.SetStage();
                             listView.Items.Refresh();
@@ -86,10 +86,10 @@ namespace TicketManager
 
         private void selectEvent_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(StaticTicketItems.ListEvents[selectEvent.SelectedIndex].getEventId))
+            if (!string.IsNullOrEmpty(StaticTicketItems.ListEvents[selectEvent.SelectedIndex].eventId))
             {
                 StaticTicketItems.Tickets.Clear();
-                StaticTicketItems.Tickets.AddRange(t4y.getAllTickets(StaticTicketItems.ListEvents[selectEvent.SelectedIndex].getEventId, userSession));
+                StaticTicketItems.Tickets.AddRange(t4y.getAllTickets(StaticTicketItems.ListEvents[selectEvent.SelectedIndex].eventId, userSession));
 
                 listView.Items.Clear();
                 foreach (Ticket t in StaticTicketItems.Tickets)
@@ -130,7 +130,7 @@ namespace TicketManager
 
             foreach (Ticket t in StaticTicketItems.Tickets)
             {
-                if (t.returnName.Contains(SearchInput.Text) || t.getTicketMail.Contains(SearchInput.Text))
+                if (t.ticketName.IndexOf(SearchInput.Text, StringComparison.OrdinalIgnoreCase) >= 0 || t.ticketMail.IndexOf(SearchInput.Text, StringComparison.OrdinalIgnoreCase) >= 0)
                 {
                     listView.Items.Add(t);
                 }

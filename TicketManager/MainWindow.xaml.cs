@@ -120,8 +120,12 @@ namespace TicketManager
 
         private void scrollToIndexItem(object sender, RoutedEventArgs e)
         {
-            listView.SelectedItem = StaticTicketItems.Tickets[999];
-            listView.ScrollIntoView(StaticTicketItems.Tickets[1005]);
+            try
+            {
+                listView.SelectedItem = StaticTicketItems.Tickets[999];
+                listView.ScrollIntoView(StaticTicketItems.Tickets[1005]);
+            }
+            catch (Exception ex) { }
         }
 
         private void SearchTicket_Click(object sender, RoutedEventArgs e)

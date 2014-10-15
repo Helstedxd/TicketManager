@@ -23,13 +23,6 @@ namespace ProgramUpdater
         public MainWindow()
         {
             InitializeComponent();
-
-            /*
-            foreach (string s in args)
-            {
-                MessageBox.Show(s);
-            }
-            */
         }
     }
 }

@@ -22,18 +22,26 @@ namespace TicketManager
     public partial class MainWindow : Window
     {
         public const double version = 0.1;
-        Tickets4YouManager t4y = new Tickets4YouManager("test");
-        
+        public static Tickets4YouManager t4y = new Tickets4YouManager("test");
+        UpdateManager updateManager = new UpdateManager();
+
         public MainWindow()
         {
             InitializeComponent();
+
             listView.ItemsSource = StaticTicketItems.Tickets;
             selectEvent.ItemsSource = StaticTicketItems.ListEvents;
 
-            if (!string.IsNullOrEmpty(t4y.lookForUpdate("main", version)))
+            updateManager.registrerUpdate("main", version);
+            updateManager.registrerUpdate("Tickets4You", Tickets4You.Tickets4YouManager.version);
+            updateManager.registrerUpdate("HashString", HashString.HashBuilder.version);
+            updateManager.registrerUpdate("HttpPoster", HttpPoster.RemotePost.version);
+
+            if (updateManager.update())
             {
-                MessageBox.Show(t4y.lookForUpdate("main", Tickets4YouManager.version));
+                Close();
             }
+
 
             if (string.IsNullOrEmpty(t4y.getUserSession()))
             {

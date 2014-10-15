@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
@@ -15,17 +16,19 @@ namespace ProgramUpdater
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-
             foreach (string arg in e.Args)
             {
-
                 MessageBox.Show(arg);
-                // TODO: whatever
-
             }
 
-            base.OnStartup(e);
+            /*
+            File.Delete("TicketManager.exe");
+            File.Delete("HashString.dll");
+            File.Delete("HttpPoster.dll");
+            File.Delete("Tickets4You.dll");
+            */
 
+            base.OnStartup(e);
         }
     }
 }

@@ -21,10 +21,9 @@ namespace TicketManager
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string userSession = "";
         public const double version = 0.1;
         Tickets4YouManager t4y = new Tickets4YouManager("test");
-
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -36,15 +35,13 @@ namespace TicketManager
                 MessageBox.Show(t4y.lookForUpdate("main", Tickets4YouManager.version));
             }
 
-            if (userSession.Length == 0)
+            if (string.IsNullOrEmpty(t4y.getUserSession()))
             {
                 userLogin userLoginWindow = new userLogin();
                 if (userLoginWindow.ShowDialog() == true)
                 {
-                    userSession = userLoginWindow.userSessionKey;
-                    
                     StaticTicketItems.ListEvents.Add(new ListEvents(null, "Choose Event"));                    
-                    StaticTicketItems.ListEvents.AddRange(t4y.getEvents(userSession));
+                    StaticTicketItems.ListEvents.AddRange(t4y.getEvents());
                     selectEvent.Items.Refresh();
                 }
                 else
@@ -58,25 +55,28 @@ namespace TicketManager
         {
             if (e.Key == Key.Return)
             {
-                bool ticketFound = false;
-                foreach (Ticket t in StaticTicketItems.Tickets)
-                {
-                    if (t.ticketId == TicketId.Text)
-                    {
-                        ticketFound = true;
+                validateTicketButton_Click(sender, e);
+            }
+        }
 
-                        if (t.valid)
-                        {
-                            t.SetStage();
-                            listView.Items.Refresh();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Ticket not valid!");
-                        }
+        private void validateTicketButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Convert.ToBoolean(StaticTicketItems.Tickets.Count))
+            {
+                Ticket result = StaticTicketItems.Tickets.Find(t => t.ticketId == TicketId.Text);
+                if (!string.IsNullOrEmpty(result.ticketId))
+                {
+                    if (t4y.validateTicket(result.ticketId))
+                    {
+                        result.SetStage();
+                        listView.Items.Refresh();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ticket not valid!");
                     }
                 }
-                if (!ticketFound)
+                else
                 {
                     MessageBox.Show("Ticket not found!");
                 }
@@ -89,7 +89,7 @@ namespace TicketManager
             if (!string.IsNullOrEmpty(StaticTicketItems.ListEvents[selectEvent.SelectedIndex].eventId))
             {
                 StaticTicketItems.Tickets.Clear();
-                StaticTicketItems.Tickets.AddRange(t4y.getAllTickets(StaticTicketItems.ListEvents[selectEvent.SelectedIndex].eventId, userSession));
+                StaticTicketItems.Tickets.AddRange(t4y.getAllTickets(StaticTicketItems.ListEvents[selectEvent.SelectedIndex].eventId));
 
                 listView.Items.Refresh();
             }
@@ -112,16 +112,6 @@ namespace TicketManager
             dapp.ShowDialog();
         }
 
-        private void scrollToIndexItem(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                listView.SelectedItem = StaticTicketItems.Tickets[999];
-                listView.ScrollIntoView(StaticTicketItems.Tickets[1005]);
-            }
-            catch (Exception ex) { }
-        }
-
         private void SearchTicket_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(SearchInput.Text))
@@ -134,6 +124,36 @@ namespace TicketManager
             }
 
             listView.Items.Refresh();
+        }
+
+        private void contextMenuValidateTicket(object sender, RoutedEventArgs e)
+        {
+            int errors = 0;
+
+            if (Convert.ToBoolean(StaticTicketItems.Tickets.Count))
+            {
+                foreach (Ticket t in listView.SelectedItems)
+                {
+                    if (t4y.validateTicket(t.ticketId))
+                    {
+                        t.SetStage();
+                        listView.Items.Refresh();
+                    }
+                    else
+                    {
+                        errors++;
+                    }
+                }
+
+                if (errors == 1)
+                {
+                    MessageBox.Show("Ticket could not be verified.");
+                }
+                else if (errors > 1)
+                {
+                    MessageBox.Show("Some tickets could not be verified.");
+                }
+            }
         }
     }
 }

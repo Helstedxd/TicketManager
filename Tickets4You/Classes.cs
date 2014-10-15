@@ -66,11 +66,18 @@ namespace Tickets4You
             }
         }
 
-        public DateTime returnTimeUsed
+        public string returnTimeUsed
         {
             get
             {
-                return _timeUsed;
+                if (_timeUsed == StaticItems.UnixTimeStampToDateTime(Convert.ToDouble(0)))
+                {
+                    return "Ticket not used.";
+                }
+                else
+                {
+                    return _timeUsed.ToString();
+                }
             }
         }
 
@@ -89,6 +96,11 @@ namespace Tickets4You
                 return true;
             }
             return false;
+        }
+
+        public override string ToString()
+        {
+            return this.ticketName;
         }
     }
 
@@ -122,5 +134,10 @@ namespace Tickets4You
     {
         public double version { get; set; }
         public string downloadURL { get; set; }
+    }
+
+    public class validateTicketReturn
+    {
+        public bool valid { get; set; }
     }
 }

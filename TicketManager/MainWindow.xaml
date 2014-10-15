@@ -20,12 +20,14 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="300"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <ListView x:Name="listView" Grid.Column="0" SelectionMode="Single">
+            <ListView x:Name="listView" Grid.Column="0">
                 <ListView.ContextMenu>
                     <ContextMenu>
-                        <MenuItem Header="Print Ticket" Click="debugPdfPrint_Click" Command="{Binding RemoveItem}" CommandParameter="{Binding ElementName=itemsListView, Path=SelectedItem}" />
-                        <MenuItem Header="Edit Ticket" Command="{Binding RemoveItem}" CommandParameter="{Binding ElementName=itemsListView, Path=SelectedItem}" />
-                        <MenuItem Header="Delete Ticket" Command="{Binding RemoveItem}" CommandParameter="{Binding ElementName=itemsListView, Path=SelectedItem}" />
+                        <MenuItem Header="_Validate Ticket" Click="contextMenuValidateTicket"/>
+                        <Separator/>
+                        <MenuItem Header="_Print Ticket" Click="debugPdfPrint_Click" />
+                        <MenuItem Header="_Edit Ticket" />
+                        <MenuItem Header="_Delete Ticket" />
                     </ContextMenu>
                 </ListView.ContextMenu>
                 <ListView.View>
@@ -41,20 +43,17 @@
             </ListView>
             <ComboBox Grid.Column="1" SelectedIndex="0" VerticalAlignment="Top" Width="280" HorizontalAlignment="Right" Margin="0,10,10,0" Name="selectEvent" SelectionChanged="selectEvent_SelectionChanged" />
 
-            <GridSplitter Grid.Column="1" HorizontalAlignment="Left" Height="5" Margin="10,37,0,0" VerticalAlignment="Top" Width="280" />
+            <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="5" Margin="10,37,0,0" VerticalAlignment="Top" Width="280"/>
 
             <Label Content="Ticket Id:" HorizontalAlignment="Left" Margin="10,47,0,0"  VerticalAlignment="Top" Grid.Column="1"/>
-            <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Margin="67,47,0,414" TextWrapping="Wrap" Name="TicketId" Width="223" KeyDown="OnKeyDownHandler" Grid.Column="1"/>
-            <Button Content="Validate Ticket" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="280" Grid.Column="1"/>
-            <GridSplitter Grid.Column="1" HorizontalAlignment="Left" Height="5" Margin="10,105,0,0" VerticalAlignment="Top" Width="280"/>
+            <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Margin="67,47,0,414" TextWrapping="Wrap" Name="TicketId" Width="223" KeyDown="OnKeyDownHandler" Grid.Column="1" Text="5701369002142"/>
+            <Button Content="Validate Ticket" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="280" Grid.Column="1" Name="validateTicketButton" Click="validateTicketButton_Click"/>
+
+            <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="5" Margin="10,105,0,0" VerticalAlignment="Top" Width="280"/>
 
             <Label Content="Search" Grid.Column="1" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top"/>
             <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="60,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Name="SearchInput" KeyUp="SearchTicket_Click"/>
             <Button Content="Search For Ticket" Grid.Column="1" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" Width="280" Name="SearchTicket" Click="SearchTicket_Click"/>
-
-
-
-            <Button Content="Test button: print pdf" Name="debugPdfPrint" Grid.Column="1" HorizontalAlignment="Left" Margin="140,453,0,0" VerticalAlignment="Top" Width="150" Click="scrollToIndexItem"/>
         </Grid>
 
     </Grid>

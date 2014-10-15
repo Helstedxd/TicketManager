@@ -27,6 +27,7 @@ namespace TicketManager
         public userLogin()
         {
             InitializeComponent();
+            Username.Focus();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -43,6 +44,11 @@ namespace TicketManager
             {
                 MessageBox.Show("Login failed");
             }
+        }
+
+        private void Username_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

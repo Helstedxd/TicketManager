@@ -30,6 +30,8 @@ namespace Tickets4You
 
             req.Add("Username", Username);
             req.Add("Password", HashBuilder.GetHashString(Password));
+            req.Add("userSession", this.userSession);
+            req.Add("apiKey", this.APIKey);
 
             LoginReturn lr = JsonConvert.DeserializeObject<LoginReturn>(req.Post());
 
@@ -41,25 +43,26 @@ namespace Tickets4You
             return lr.response;
         }
 
-        public List<ListEvents> getEvents(string userSessionKey)
+        public List<ListEvents> getEvents()
         {
             RemotePost req = new RemotePost("http://tickets4you.dk/api/getEvents");
             req.Timeout = 3;
 
-            req.Add("userSession", userSessionKey);
+            req.Add("userSession", this.userSession);
 
             ListEvents[] le = JsonConvert.DeserializeObject<ListEvents[]>(req.Post());
 
             return le.ToList<ListEvents>();
         }
 
-        public List<Ticket> getAllTickets(string eventId, string userSessionKey)
+        public List<Ticket> getAllTickets(string eventId)
         {
             RemotePost req = new RemotePost("http://tickets4you.dk/api/getTickets");
             req.Timeout = 3;
 
-            req.Add("userSession", userSessionKey);
             req.Add("eventId", eventId);
+            req.Add("userSession", this.userSession);
+            req.Add("apiKey", this.APIKey);
 
             Ticket[] tickets = JsonConvert.DeserializeObject<Ticket[]>(req.Post());
 
@@ -84,6 +87,8 @@ namespace Tickets4You
             req.Timeout = 3;
 
             req.Add("Item", item);
+            req.Add("userSession", this.userSession);
+            req.Add("apiKey", this.APIKey);
 
             UpdateReturn ur = JsonConvert.DeserializeObject<UpdateReturn>(req.Post());
 
@@ -95,6 +100,19 @@ namespace Tickets4You
             {
                 return null;
             }
+        }
+
+        public bool validateTicket(string ticketId)
+        {
+            RemotePost req = new RemotePost("http://tickets4you.dk/api/validateEvent");
+            req.Timeout = 3;
+
+            req.Add("userSession", this.userSession);
+            req.Add("apiKey", this.APIKey);
+
+            validateTicketReturn vtr = JsonConvert.DeserializeObject<validateTicketReturn>(req.Post());
+
+            return vtr.valid;
         }
     }
 }

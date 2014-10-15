@@ -11,5 +11,14 @@ namespace TicketManager
     {
         public static List<Ticket> Tickets = new List<Ticket>();
         public static List<ListEvents> ListEvents = new List<ListEvents>();
+
+        public static bool PartOfString(string needle, string haystack)
+        {
+            if (haystack.IndexOf(needle, StringComparison.OrdinalIgnoreCase) >= 0)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

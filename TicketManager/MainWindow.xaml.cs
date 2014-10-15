@@ -28,7 +28,7 @@ namespace TicketManager
         public MainWindow()
         {
             InitializeComponent();
-            //listView.ItemsSource = StaticTicketItems.Tickets;
+            listView.ItemsSource = StaticTicketItems.Tickets;
             selectEvent.ItemsSource = StaticTicketItems.ListEvents;
 
             if (!string.IsNullOrEmpty(t4y.lookForUpdate("main", version)))
@@ -91,12 +91,6 @@ namespace TicketManager
                 StaticTicketItems.Tickets.Clear();
                 StaticTicketItems.Tickets.AddRange(t4y.getAllTickets(StaticTicketItems.ListEvents[selectEvent.SelectedIndex].eventId, userSession));
 
-                listView.Items.Clear();
-                foreach (Ticket t in StaticTicketItems.Tickets)
-                {
-                    listView.Items.Add(t);
-                }
-
                 listView.Items.Refresh();
             }
         }
@@ -130,15 +124,16 @@ namespace TicketManager
 
         private void SearchTicket_Click(object sender, RoutedEventArgs e)
         {
-            listView.Items.Clear();
-
-            foreach (Ticket t in StaticTicketItems.Tickets)
+            if (string.IsNullOrEmpty(SearchInput.Text))
             {
-                if (t.ticketName.IndexOf(SearchInput.Text, StringComparison.OrdinalIgnoreCase) >= 0 || t.ticketMail.IndexOf(SearchInput.Text, StringComparison.OrdinalIgnoreCase) >= 0)
-                {
-                    listView.Items.Add(t);
-                }
+                listView.ItemsSource = StaticTicketItems.Tickets;
             }
+            else
+            {
+                listView.ItemsSource = from data in StaticTicketItems.Tickets where StaticTicketItems.PartOfString(SearchInput.Text, data.ticketName) || StaticTicketItems.PartOfString(SearchInput.Text, data.ticketMail) select data;
+            }
+
+            listView.Items.Refresh();
         }
     }
 }

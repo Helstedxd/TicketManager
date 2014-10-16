@@ -25,9 +25,22 @@
      			</ListView.View>
      		</ListView>
 
-     		<ComboBox Grid.Column="1" Margin="0,5,0,0" VerticalAlignment="Top"/>
-     		<GroupBox Grid.Column="1" Header="Validate Ticket" Margin="0,32,0,0" VerticalAlignment="Top">
+     		<ComboBox Grid.Column="1" Margin="5,10,5,0" VerticalAlignment="Top"/>
+     		<GroupBox Grid.Column="1" Margin="5,37,5,0" Header="Validate Ticket" VerticalAlignment="Top">
+     			<StackPanel>
+	     			<Label Content="Ticket ID:" Grid.Column="1"/>
+	     			<TextBox Grid.Column="1" FontSize="25" Height="40" Margin="5,0,5,0" TextWrapping="Wrap" VerticalAlignment="Top" />
+		     		<Button Content="Vertify Ticket" Grid.Column="1" Margin="5,5,5,0" VerticalAlignment="Top"/>
+				</StackPanel>
 			</GroupBox>
+
+     		<GroupBox Grid.Column="1" Margin="5,158,5,0" Header="Search For Ticket" VerticalAlignment="Top">
+     			<StackPanel>
+	     			<Label Content="Search String:" Grid.Column="1"/>
+     				<TextBox Grid.Column="1" Height="23" Margin="5,0,5,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+		     		<Button Content="Search For Ticket" Grid.Column="1" Margin="5,5,5,0" VerticalAlignment="Top"/>
+				</StackPanel>
+     		</GroupBox>
      	</Grid>
 
      	<StatusBar Grid.Row="2">

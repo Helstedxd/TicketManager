@@ -1,9 +1,15 @@
 ﻿<Window x:Class="TicketManager.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" MinWidth="800" MinHeight="500" Height="500" Width="800">
+        Title="MainWindow" Height="500" Width="800" MinWidth="800" MinHeight="500">
     <Grid>
-        <Menu IsMainMenu="True" VerticalAlignment="Top" Height="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0" IsMainMenu="True" >
             <MenuItem Header="_File">
                 <MenuItem Header="_Create new ticket"></MenuItem>
                 <MenuItem Header="_Edit ticket"></MenuItem>
@@ -15,11 +21,12 @@
             </MenuItem>
         </Menu>
 
-        <Grid Background="#FFE5E5E5" Margin="0,20,0,20">
+        <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="300"></ColumnDefinition>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="200"/>
             </Grid.ColumnDefinitions>
+
             <ListView x:Name="listView" Grid.Column="0">
                 <ListView.ContextMenu>
                     <ContextMenu>
@@ -41,21 +48,27 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <ComboBox Grid.Column="1" SelectedIndex="0" VerticalAlignment="Top" Width="280" HorizontalAlignment="Right" Margin="0,10,10,0" Name="selectEvent" SelectionChanged="selectEvent_SelectionChanged" />
 
-            <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="5" Margin="10,37,0,0" VerticalAlignment="Top" Width="280"/>
+            <ComboBox Grid.Column="1" Margin="5,10,5,0" VerticalAlignment="Top" Name="selectEvent" SelectionChanged="selectEvent_SelectionChanged"/>
 
-            <Label Content="Ticket Id:" HorizontalAlignment="Left" Margin="10,47,0,0"  VerticalAlignment="Top" Grid.Column="1"/>
-            <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Margin="67,47,0,414" TextWrapping="Wrap" Name="TicketId" Width="223" KeyDown="OnKeyDownHandler" Grid.Column="1" Text="5701369002142"/>
-            <Button Content="Validate Ticket" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="280" Grid.Column="1" Name="validateTicketButton" Click="validateTicketButton_Click"/>
+            <GroupBox Grid.Column="1" Margin="5,37,5,0" Header="Validate Ticket" VerticalAlignment="Top">
+                <StackPanel>
+                    <Label Content="Ticket ID:" Grid.Column="1"/>
+                    <TextBox Grid.Column="1" FontSize="25" Height="40" Margin="5,0,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Name="TicketId" KeyDown="OnKeyDownHandler"/>
+                    <Button Content="Vertify Ticket" Grid.Column="1" Margin="5,5,5,0" VerticalAlignment="Top" Name="validateTicketButton" Click="validateTicketButton_Click"/>
+                </StackPanel>
+            </GroupBox>
 
-            <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="5" Margin="10,105,0,0" VerticalAlignment="Top" Width="280"/>
-
-            <Label Content="Search" Grid.Column="1" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top"/>
-            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="60,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Name="SearchInput" KeyUp="SearchTicket_Click"/>
-            <Button Content="Search For Ticket" Grid.Column="1" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" Width="280" Name="SearchTicket" Click="SearchTicket_Click"/>
+            <GroupBox Grid.Column="1" Margin="5,158,5,0" Header="Search For Ticket" VerticalAlignment="Top">
+                <StackPanel>
+                    <Label Content="Search String:" Grid.Column="1"/>
+                    <TextBox Grid.Column="1" Height="23" Margin="5,0,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Name="SearchInput" KeyUp="SearchTicket_Click"/>
+                    <Button Content="Search For Ticket" Grid.Column="1" Margin="5,5,5,0" VerticalAlignment="Top" Name="SearchTicket" Click="SearchTicket_Click"/>
+                </StackPanel>
+            </GroupBox>
         </Grid>
 
-        <StatusBar Height="20" VerticalAlignment="Bottom"/>
+        <StatusBar Grid.Row="2">
+        </StatusBar>
     </Grid>
 </Window>

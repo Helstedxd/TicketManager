@@ -37,10 +37,10 @@ namespace TicketManager
 
         private void startDownload()
         {
-            bool exists = System.IO.Directory.Exists(downloadLocation);
+            bool exists = Directory.Exists(downloadLocation);
             if (!exists)
             {
-                System.IO.Directory.CreateDirectory(downloadLocation);
+                Directory.CreateDirectory(downloadLocation);
             }
             try
             {

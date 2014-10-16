@@ -11,7 +11,6 @@ namespace HttpPoster
 {
     public class RemotePost
     {
-        public const double version = 0.1;
         private System.Collections.Specialized.NameValueCollection Inputs = new System.Collections.Specialized.NameValueCollection();
         private string Url = string.Empty;
 

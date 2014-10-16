@@ -5,7 +5,7 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Windows;
+    using System.Windows;
 
 namespace ProgramUpdater
 {
@@ -16,17 +16,14 @@ namespace ProgramUpdater
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            foreach (string arg in e.Args)
+            try
             {
-                MessageBox.Show(arg);
+                if (!string.IsNullOrEmpty(e.Args[0]))
+                {
+                    StaticItems.updateDownloadUrl = e.Args[0];
+                }
             }
-
-            /*
-            File.Delete("TicketManager.exe");
-            File.Delete("HashString.dll");
-            File.Delete("HttpPoster.dll");
-            File.Delete("Tickets4You.dll");
-            */
+            catch (Exception ex) { }
 
             base.OnStartup(e);
         }

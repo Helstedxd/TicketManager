@@ -33,9 +33,6 @@ namespace TicketManager
             selectEvent.ItemsSource = StaticTicketItems.ListEvents;
 
             updateManager.registrerUpdate("main", version);
-            updateManager.registrerUpdate("Tickets4You", Tickets4You.Tickets4YouManager.version);
-            updateManager.registrerUpdate("HashString", HashString.HashBuilder.version);
-            updateManager.registrerUpdate("HttpPoster", HttpPoster.RemotePost.version);
 
             if (updateManager.update())
             {

@@ -9,7 +9,6 @@ namespace HashString
 {
     public static class HashBuilder
     {
-        public const double version = 0.1;
         public static byte[] GetHash(string inputString)
         {
             SHA512 shaM = new SHA512Managed();

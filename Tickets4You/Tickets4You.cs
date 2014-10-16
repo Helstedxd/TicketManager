@@ -15,7 +15,6 @@ namespace Tickets4You
 {
     public class Tickets4YouManager
     {
-        public const double version = 0.1;
         private string APIKey = null, userSession = null;
 
         public Tickets4YouManager(string key)

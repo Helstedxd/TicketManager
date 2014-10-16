@@ -21,7 +21,7 @@ namespace TicketManager
     /// </summary>
     public partial class MainWindow : Window
     {
-        public const double version = 0.1;
+        public const double version = 0.2;
         public static Tickets4YouManager t4y = new Tickets4YouManager("test");
         UpdateManager updateManager = new UpdateManager();
 

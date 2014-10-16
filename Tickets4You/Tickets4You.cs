@@ -57,7 +57,7 @@ namespace Tickets4You
         public List<Ticket> getAllTickets(string eventId)
         {
             RemotePost req = new RemotePost("http://tickets4you.dk/api/getTickets");
-            req.Timeout = 3;
+            req.Timeout = 30;
 
             req.Add("eventId", eventId);
             req.Add("userSession", this.userSession);

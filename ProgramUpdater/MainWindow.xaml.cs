@@ -33,15 +33,16 @@ namespace ProgramUpdater
         public MainWindow()
         {
             InitializeComponent();
-            StaticItems.updateDownloadUrl = "http://tickets4you.dk/api/Debug.zip";
 
             if (string.IsNullOrEmpty(StaticItems.updateDownloadUrl))
             {
                 Close();
             }
-
-            //start download
-            startDownload(StaticItems.updateDownloadUrl);
+            else
+            {
+                //start download
+                startDownload(StaticItems.updateDownloadUrl);
+            }
         }
 
         private void deleteFolderAndContent(string folder)

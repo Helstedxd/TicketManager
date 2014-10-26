@@ -23,7 +23,6 @@ namespace TicketManager
     {
         public const double version = 0.3;
         public static Tickets4YouManager t4y = new Tickets4YouManager("test");
-        UpdateManager updateManager = new UpdateManager();
 
         public MainWindow()
         {
@@ -31,14 +30,6 @@ namespace TicketManager
 
             listView.ItemsSource = StaticTicketItems.Tickets;
             selectEvent.ItemsSource = StaticTicketItems.ListEvents;
-
-            updateManager.registrerUpdate("main", version);
-
-            if (updateManager.update())
-            {
-                Close();
-            }
-
 
             if (string.IsNullOrEmpty(t4y.getUserSession()))
             {
